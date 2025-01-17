@@ -26,7 +26,7 @@ git remote -v 현재 로컬 저장소에 등록된 원격 저장소 목록 보�
 git remote rm 원격_저장소_이름 현재 로컬 저장소에 등록된 원격 저장소 삭제 
 ______________
 
-git reset --옵션 --commitid 특정 commit으로 되돌아가고 이후의 commit은 삭제  
+git reset --옵션 --commitid / 특정 commit으로 되돌아가고 이후의 commit은 삭제  
 --soft 삭제된 commit의 기록을 staging area에 남김  
 --mixed 삭제된 commit의 기록을 wordking directory에 남김 (기본 옵션)   
 --hard 삭제된 commit의 기록을 남기지 않음  
@@ -36,7 +36,7 @@ git reflog
 
 ______________
 
-git restore --staged <file> staging area에 올라간 파일 unstage하기기
+git restore --staged <file> / staging area에 올라간 파일 unstage하기기
 
 ______________
 
