@@ -36,7 +36,7 @@ git reflog
 
 ______________
 
-git restore <file>
+git restore --staged <file> staging area에 올라간 파일 unstage하기기
 
 ______________
 
