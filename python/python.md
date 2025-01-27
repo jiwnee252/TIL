@@ -534,6 +534,8 @@ print(
 
 [할당, 얕은 복사와 깊은 복사](https://www.youtube.com/watch?v=RJqvaj8MI_o&ab_channel=%EB%84%90%EB%84%90%ED%95%9C%EA%B5%90%EC%88%98%EC%9D%98%EC%BD%94%EB%94%A9%ED%81%B4%EB%9E%98%EC%8A%A4)
 
+[a[:]=b and a=b[:]](https://stackoverflow.com/questions/11297774/what-is-the-difference-between-a-b-and-a-b?rq=3)
+
 # 해시 테이블
 
 - 해시 함수를 사용하여 변환한 값을 인덱스로 삼아 키key와 데이터value를 저장하는 자료구조
