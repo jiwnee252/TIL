@@ -91,6 +91,10 @@ print(squared_numbers) #[1, 4, 9, 16, 25]
 
 - iterable 객체의 각 요소를 순회하면서 각 요소의 인덱스와 값을 순서쌍으로 반환하는 내장함수
 
+###### 참고자료
+
+[파이썬의 enumerate() 내장 함수로 for 루프 돌리기] (https://www.daleseo.com/python-enumerate/)
+
 # 메서드
 
 - 클래스 내부에 정의되는 함수
