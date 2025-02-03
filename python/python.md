@@ -635,3 +635,7 @@ my_function()
 # 원본 함수 실행
 # 함수 실행 후
 ```
+
+###### 참고자료
+
+[decorator 데코레이터](https://bluese05.tistory.com/30)
