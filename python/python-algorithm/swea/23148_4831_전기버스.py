@@ -15,16 +15,5 @@ for test_case in range(1, T + 1):
 
     charge_count = 0  # 충전한횟수
     current = 0  # 현재 내가 있는 정류장 번호
-    last_charge = 0  # 마지막으로 충전한 정류장 번호
 
-    for i in range(M-1) : # 0번부터 m-2
-        if Mlist[i+1] - Mlist[i] > K : # 충전 못하는경우
-            charge_count = 0
-            break
-        else: # 충전가능한경우
-            for j in range(1, len(Mlist)) :
-                if Mlist[j] - last_charge >= K :
-                    last_charge = Mlist[j-1]
-                    charge_count += 1
-    print(charge_count)
     print(f'#{test_case} {charge_count}')
