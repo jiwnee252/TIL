@@ -6,15 +6,7 @@ T = int(input())
 for test_case in range(1, T + 1):
     N = int(input())
     numlist = input().split('0')
-    # print(numlist)
-
-    onelist = []
-    for num in numlist:
-        if '1' in num:
-            onelist.append(num)
-
-    # print(onelist)
-
-    result = len(max(onelist))
+    print(numlist)
+    result = len(max(numlist))
 
     print(f'#{test_case} {result}')
