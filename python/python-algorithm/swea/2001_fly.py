@@ -6,9 +6,6 @@ T = int(input())
 for test_case in range(1, T + 1):
     N, M = map(int, input().split()) # N : 배열의크기 M : 파리채크기
     arr = [list(map(int, input().split())) for _ in range(N)]
-    # print(N)
-    # print(M)
-    # print(arr)
 
     # 최대 파리의수
     max_f = 0
