@@ -6,11 +6,39 @@ T = int(input())
 for test_case in range(1, T + 1):
     arr = [list(map(int, input().split())) for _ in range(100)]
 
-    # 2부터 출발한다하면..
-    # 현재 기준이되는 2의좌표: arr[i][j]라고 가정한다 , j = 99
+    def ladder(T):
+        for j in range(100):
+            if arr[99][j] == 2:
+                i, j = 99, j
+                break  # 2의위치 찾으면 종료
 
-    for j in range(100):
+        while i > 0:  # 맨 위로 올라갈때까지 반복
+            if j - 1 >= 0 and arr[i][j - 1] == 1:  # 왼쪽에 길잇음
+                while j - 1 >= 0 and arr[i][j - 1] == 1:
+                    j -= 1
+                i -= 1
+            elif j + 1 < 100 and arr[i][j + 1] == 1:  # 오른쪽에 길잇음
+                while j + 1 < 100 and arr[i][j + 1] == 1:
+                    j += 1
+                i -= 1
+            else:  # 좌우에 길이 없을때 위로 이동한다.
+                i -= 1
+        return j
+
+    result = ladder(T)
+    # print(result)
+
+    print(f'#{test_case} {result}')
+
+
+
+    '''
+    
+    
+    
+        for j in range(100):
         if arr[99][j] == 2:
+<<<<<<< HEAD
             i, j = 99, a   # a는 0~99사이
             # for i in range(100):
 
@@ -27,5 +55,22 @@ for test_case in range(1, T + 1):
             elif arr[i][j+1] == 0 and arr[i][j-1] == 0:
                 i = a - 1   # 위로이동
 
+=======
+            i, j = 99, j
+            break   # 2의위치 찾으면 종료
+>>>>>>> 232ea1e8fa27d3b75dd42f0402824fc8ca5d0a49
+
+    while i > 0:     # 맨 위로 올라갈때까지 반복
+        if j - 1 >= 0 and arr[i][j - 1] == 1:  # 왼쪽에 길잇음
+            while j - 1 >= 0 and arr[i][j - 1] == 1:
+                j -= 1
+            i -= 1
+        elif j+1 < 100 and arr[i][j+1] == 1:  # 오른쪽에 길잇음
+            while j+1 < 100 and arr[i][j+1] == 1:
+                j += 1
+            i -= 1
+        else:  # 좌우에 길이 없을때 위로 이동한다.
+            i -= 1
 
     print(f'#{test_case} {j}')
+    '''
