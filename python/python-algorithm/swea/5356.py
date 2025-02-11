@@ -8,14 +8,10 @@ for test_case in range(1, T + 1):
     print(tc)
 
     result = [[0] * 15 for _ in range(15)]
-    # 최대15글자이므로 15x15 0으로이루어진배열을일단만든다.
-
 
 
     for i in range(5):
         for j in range(len(tc[i])):
-            tc[i][j], tc[j][i] = tc[j][i], tc[i][j]
-            result[i][j] = tc[i][j]
 
 
     print(result)
