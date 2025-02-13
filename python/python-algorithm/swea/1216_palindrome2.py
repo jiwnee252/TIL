@@ -1,8 +1,5 @@
 import sys
 sys.stdin = open("1216.txt", "r")
-
-
-# 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
 for test_case in range(1, 11):
     T = int(input())
     # 100x100회문  # 가장긴회문의길이를구하라.
@@ -18,8 +15,6 @@ for test_case in range(1, 11):
                     if word == word[::-1]:              # 만약에회문이면
                         max_N = max(max_N, N)              # 최대회문의길이를업데이트함
     # print(max_N)
-
-
 
     # M = 1
     max_M = 1
@@ -37,7 +32,6 @@ for test_case in range(1, 11):
                     if c_word == c_word[::-1]:
                         max_M = max(max_M, M)
     # print(max_M)
-
 
     result = max(max_N, max_M)
 
