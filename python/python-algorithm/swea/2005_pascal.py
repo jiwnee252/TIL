@@ -10,10 +10,9 @@ for test_case in range(1, T+1):
     N = int(input())  # 각 테스트 케이스.
     print(N)
     pascal = []
-    #
-    # for i in range(N):
-    #     for j in range(i):
-    #         pascal[i][j] = 0
+
+
+
 
 
     # print(f'#{test_case}')
