@@ -1,3 +1,4 @@
+
 import sys
 sys.stdin = open("20397.txt", "r")
 

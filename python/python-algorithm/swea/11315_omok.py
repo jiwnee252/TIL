@@ -7,12 +7,19 @@ for test_case in range(1, T+1):
     # print(N)
     stone = [input().split() for _ in range(N)]
     # print(stone)
-    length_count = 0
+    row_count = 0
+    col_count = 0
+    # 가로
+    for row in stone:
+        if 'ooooo' in row:
+            row_count += 1
+        # print(row_count)
 
-    for i in range(N):
-        length = 0
-        # if
 
 
+    print(stone)
+# 세로
 
-    # print(f'#{test_case} {result}')
+# 대각선
+
+# print(f'#{test_case} {result}')
