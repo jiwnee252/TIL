@@ -2,21 +2,32 @@ import sys
 sys.stdin = open("1954.txt", "r")
 
 T = int(input())
-# 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
 for test_case in range(1, T + 1):
     N = int(input())
     # N * N 의 달팽이를 출력하여라
-    snail = list([0] * N for _ in range(N))
     di = [0, 1, 0, -1]
     dj = [1, 0, -1, 0]
+    snail = [[0] * N for _ in range(N)]
 
     i = 0
     j = 0
+    count = 1
+    dr = 0   # [0,1,2,3]
+    snail[i][j] = count
+    count += 1
 
-    for a in range(1, N*N+1):
-        snail[i][j] = a
+    while count <= N * N:
+        ni = i + di[dr]
+        nj = j + dj[dr]
+        if 0 <= ni < N and 0 <= nj < N and snail[ni][nj]==0:
+            i, j = ni, nj
+            snail[i][j] = count
+            count += 1
+        else:
+            dr = (dr+1) % 4
 
-    print(snail)
+    print(f'#{test_case}')
+    for lst in snail:
+        print(*lst)
 
-
-    # print(f'')
+        # 런타임에러 ??

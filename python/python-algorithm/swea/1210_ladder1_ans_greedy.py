@@ -7,7 +7,7 @@ dx = [-1, 0, 0]
 dy = [0, -1, 1]
 
 
-def search_leader(x, y):
+def search_ladder(x, y):
     # 어차피 한 번에 될거니까 원본 훼손하자
     # 원본에서는 0이 못 지나가는 곳이고
     # 처음 시작하는 부분은 지나왔으니까 이제 못 지나가는 곳으로 변경
@@ -34,7 +34,7 @@ for _ in range(1, 11):
     # 도착점은 항상 99 번째 줄에 있겠죠
     for j in range(100):
         if data[99][j] == 2:
-            result = search_leader(99, j)  # 어차피 답은 한 개거든요
+            result = search_ladder(99, j)  # 어차피 답은 한 개거든요
             break
 
     print(f"#{tc} {result}")
