@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("algo1_sample_in.txt", "r")
+sys.stdin = open("250217_algo1_sample_in.txt", "r")
 T = int(input())
 
 for test_case in range(1, T+1):

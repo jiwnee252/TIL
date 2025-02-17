@@ -40,6 +40,12 @@ git restore --staged <file> / staging area에 올라간 파일 unstage하기기
 
 ______________
 
+### 이미 올라간 파일 gitignore 적용
+
+$ git rm -r --cached .
+$ git add .
+$ git commit -m "Apply .gitignore"
+$ git push
 
 #### 참고
 
