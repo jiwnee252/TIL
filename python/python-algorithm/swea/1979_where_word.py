@@ -6,37 +6,34 @@ T = int(input())
 for test_case in range(1, T + 1):   # N*N 사이즈 퍼즐 # K는 단어의 길이
     N, K = list(map(int, input().split()))
     puzzle = [list(map(int, input().split())) for _ in range(N)]
-    puzzle2 = list(map(list, zip(*puzzle))) # 세로
+    puzzle2 = list(map(list, zip(*puzzle)))     # 세로
 
-    # count1 = 0
-    ans = 0
-    count2 = 0
-
+    ans1 = 0
+    ans2 = 0
     for row in puzzle:
-        print(row)
-        # if 0 not in row[i:i+K] and row[i-1] == 0 and row[i+K+1] == 0
-    # print(f'#{test_case} {count_puzzle1 + count_puzzle2}')
-'''
-    
-    r_count = 0
-    for row in puzzle:
-        # print(row)
+        count1 = 0
         for i in range(N):
-            pass
-
-    # print(r_count)
-    # print("여기까지")
-    c_count = 0
-    for row in range(N):
-        col = []
-        for i in puzzle:
-            col.append(i[row])
-        # print(col)
+            if row[i] == 1:
+                count1 += 1
+            if row[i] == 0 or i == N-1:
+                if count1 == K:
+                    ans1 += 1
+                    count1 = 0
+                else:
+                    count1 = 0
+    print(ans1)
+    for col in puzzle2:
+        count2 = 0
         for j in range(N):
-            if j >= 1 and j + K <= N-1:
-                if 0 not in col[j:j+K]:
-                    if col[j-1] == 0 and col[j+K] == 0 :
-                        c_count += 1
-    # print(c_count)
-    # print(f'#{test_case} {r_count + c_count}')
-'''
+            if col[j] == 1:
+                count2 += 1
+            if col[j] == 0 or j == N-1:
+                if count2 == K:
+                    ans2 += 1
+                    count2 = 0
+                else:
+                    count2 = 0
+
+    print(ans2)
+
+    print(f'#{test_case} {ans1 + ans2}')
