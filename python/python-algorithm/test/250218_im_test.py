@@ -37,3 +37,5 @@ for test_case in range(1, T + 1):
             count_list.append(count)
     # print(count_list)
     print(f'#{test_case} {max(count_list)}')
+    
+    # output 6, 10, 8 나와야함
