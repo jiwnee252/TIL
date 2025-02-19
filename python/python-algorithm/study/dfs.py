@@ -1,6 +1,7 @@
 '''
 7 8
 1 2 1 3 2 4 2 5 4 6 5 6 6 7 3 7
+
 '''
 def dfs(v, N):            # v출발, N마지막 정점
     visited = [0] * (N + 1)     # 방문표시
@@ -25,9 +26,11 @@ V, E = map(int, input().split())
 graph = list(map(int, input().split()))
 adj_list = [[] for _ in range(V+1)]         # 인접 리스트
 for i in range(E):
-    v, w = graph[i*2], graph[i*2+1]     #
+    v, w = graph[i*2], graph[i*2+1]     # i = 0 이면 v, w = graph[0], graph[1] / i = 1 이면 v, w = graph[2], graph[3]
 
-    adj_list[v].append(w)
-    adj_list[w].append(v)                 # 방향이 없는 경우
+    adj_list[v].append(w)       # 인접리스트의 v번째 인덱스에 w를 저장
+    adj_list[w].append(v)       # 인접리스트의 w번째 인덱스에 v를 저장
+    # 뭐냐면. 양방향 그래프이므로, 두 정점을 연결한다
 
-dfs(1, V)                           # 1번부터 탐색색
+print(adj_list)
+dfs(1, V)                           # 1번부터 탐색
