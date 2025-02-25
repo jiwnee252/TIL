@@ -1,3 +1,6 @@
+import sys
+sys.stdin open="21673.txt", "r"
+
 T = int(input())
 for test_case in range(1, 4):
     # 피연산자 만나면 스택에 push

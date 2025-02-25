@@ -1,22 +1,29 @@
 import sys
-sys.stdin = open('input.txt')
-
+sys.stdin = open('21673.txt', 'r')
 
 T = int(input())
-for tc in range(1, T+1):
-    N = int(input())
-    print(f'#{tc}')
+for test_case in range(1, 4):
+    # 피연산자 만나면 스택에 push
+    # 연산자 만나면 필요한 만큼 피연산자를 스택에서 pop하여 연산, 연산결과를 다시 스택에 push
+    # 수식이 끝나면 마지막으로 스택을 pop
 
-    prev_stack = [1]
+    tokens = input()
 
-    for i in range(1, N):
-        new_stack = [1]
+    operator = {'+':1, '*':2, '/':2}
+    stack = []
+    result = []
 
-        for j in range(len(prev_stack) - 1):
-            new_stack.append(prev_stack[j] + prev_stack[j+1])
+    for i in range(len(tokens)):
+        if tokens[i].isnumeric():   # 숫자이면
+            result.append(tokens[i])     # 스택에넣고
+        elif tokens[i] in operator: # 연산자이면
+            while stack and operator[tokens[i]] <= operator[stack[-1]]:
+            # 우선순위가 같거나 작으면
+            # tokens[i]우선순위가 더 커질때까지 스택에서 pop
+                result.append(stack.pop())
+            stack.append(tokens[i])
+    while stack:
+        result.append(stack.pop())
 
-        new_stack.append(1)
-
-        print(' '.join(map(str, new_stack)))
-
-        prev_stack = new_stack  # 다음 반복을 위해서 이전 행을 갱신해준다.
+    # print("".join(result))
+    print(f'#{test_case} {"".join(result)}')
