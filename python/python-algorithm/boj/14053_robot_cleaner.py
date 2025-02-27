@@ -6,8 +6,6 @@ di = [-1, 0, 1, 0]          # 상 좌 하 우 (반시계방향 회전)
 dj = [0, -1, 0, 1]
 count = 0
 
-# 방의 가장 북쪽, 가장 남쪽, 가장 서쪽, 가장 동쪽 줄 중 하나 이상에 위치한 모든 칸에는 벽이 있다.
-# ㄴ 이얘기는 왜있지;;
 
 while True:
     if arr[i][j] == 0:   # 처음은 청소 안된칸
@@ -16,6 +14,7 @@ while True:
         # 이제 90도 회전하면서 찾아야하는데
     for k in range(4):
         dr = (dr + 1) % 4  # 반시계 90도 회전해서 방향바꾸고
+
         ni = i + di[dr]
         nj = j + dj[dr]
         # 해당 좌표가 범위를 안나가고 / 청소도 안됐으면
@@ -30,13 +29,10 @@ while True:
         i = i - di[dr]
         j = j - dj[dr]
         # 만약 후진을 못하면 break 할거니깐.
-        # 만약 튀어나가거나
-        if i > N or i < 0 :
+        # 만약 벽이거나 튀어나가면;
+        if (i >= N or i < 0 or j >= M or j < 0):
             break
-        elif j > M or j < 0 :
-            break
-            # 벽이면
-        elif arr[i][j] == 1:
+        if arr[i][j] == 1:
             # 청소끝.
             break
 
