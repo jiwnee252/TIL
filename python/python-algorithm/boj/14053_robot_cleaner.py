@@ -3,7 +3,7 @@ i, j, dr = map(int, input().split())  # 현재x좌표 현재y좌표 현재방향
 arr = [list(map(int, input().split())) for _ in range(N)]
 
 di = [-1, 0, 1, 0]          # 상 좌 하 우 (반시계방향 회전)
-dj = [0, -1, 0, 1]
+dj = [0, 1, 0, -1]
 count = 0
 
 
@@ -13,7 +13,7 @@ while True:
         count += 1      # 청소 횟수를 올려줌
         # 이제 90도 회전하면서 찾아야하는데
     for k in range(4):
-        dr = (dr + 1) % 4  # 반시계 90도 회전해서 방향바꾸고
+        dr = (dr - 1) % 4  # 반시계 90도 회전해서 방향바꾸고
 
         ni = i + di[dr]
         nj = j + dj[dr]
