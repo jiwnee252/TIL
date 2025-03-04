@@ -1,4 +1,5 @@
 origin_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
 """
 전치(행과 열을 바꿈)
 언패킹으로 각 리스트를 추출하고, zip으로 각 열끼리 묶어준다.
@@ -10,14 +11,14 @@ reverse_matrix = list(map(list, zip(*origin_matrix)))
 2. (n-1-i, j) => 행을 뒤집고
 3. (j, n-1-i) => 전치 
 """
-rotate_90_clockwise_matrix = list(zip(*origin_matrix[::-1]))
+rotate_90_clockwise_matrix = [list(x) for x in zip(*origin_matrix[::-1])]
 """
 90도 반시계방향 회전 (전치, 행을 뒤집기)
 (i, j) => (n-1-j, i)
 2. (j, i) => 전치
 3. (n-1-j, i) => 행 뒤집기 
 """
-rotate_90_counter_clockwise_matrix = list(zip(*origin_matrix))[::-1]
+rotate_90_counter_clockwise_matrix = [list(x) for x in zip(*origin_matrix)][::-1]
 """
 (n-1-i, m-1-j)
 각 열에 대해서 뒤집고, 최종적으로 행에 대해서 뒤집기 
