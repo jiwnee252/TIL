@@ -13,11 +13,8 @@ def solution(arr):
             score[1] += 1
         if arr[i] == student3[i % len(student3)]:
             score[2] += 1
-
+    for i in range(len(score)):
+        if score[i] == max(score):
+            result.append(i + 1)
 
     return result
-    
-    # 가장 높은 점수를 받은 사람이 여럿일 경우 return 하는 값을 오름차순 정렬한다
-
-answers = input()
-print(solution(answers))
