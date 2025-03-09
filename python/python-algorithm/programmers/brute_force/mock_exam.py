@@ -1,33 +1,23 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/42840
 
-# 1번수포자: 12345
-# 2번수포자: 21232425
-# 3번수포자: 3311224455
-
-answers = input()
-
 def solution(arr):
     student1 = [1, 2, 3, 4, 5]
-    student2 = [2, 1, 2, 3, 2, 4, 5]
+    student2 = [2, 1, 2, 3, 2, 4, 2, 5]
     student3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
-    score1 = 0
-    score2 = 0
-    score3 = 0
-    for q in range(len(arr)):
-        if q <= len(student1):
-            if arr[q] == student1[q]:
-                score1 += 1
-        else:
-
-        if q <= len(student2):
-            if arr[q] == student2[q]:
-                score2 += 1
-        else:
-        if q <= len(student3):
-            if arr[q] == student3[q]:
-                score3 += 1
-        else:
+    score = [0, 0, 0]
+    result = []
+    for i in range(len(arr)):
+        if arr[i] == student1[i % len(student1)]:
+            score[0] += 1
+        if arr[i] == student2[i % len(student2)]:
+            score[1] += 1
+        if arr[i] == student3[i % len(student3)]:
+            score[2] += 1
 
 
+    return result
+    
+    # 가장 높은 점수를 받은 사람이 여럿일 경우 return 하는 값을 오름차순 정렬한다
 
-    return
+answers = input()
+print(solution(answers))
