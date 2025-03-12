@@ -4,8 +4,6 @@ import itertools
 def solution(k, dungeons):
     dungeon_list = list(itertools.permutations(dungeons))
     max_count = 0
-
-
     for i in range(len(dungeon_list)):
         count = 0
         current_fatigue = k
@@ -22,4 +20,4 @@ def solution(k, dungeons):
     return max_count
 
 
-# print(solution(80, [[80,20],[50,40],[30,10]]))
+print(solution(80, [[80,20],[50,40],[30,10]]))
