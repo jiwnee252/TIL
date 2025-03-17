@@ -1,7 +1,7 @@
 import sys
 sys.stdin = open("23894_5188_input.txt", "r")
 
-# dfs
+# dfs_bfs
 def dfs(N, arr):
     # 아래, 오른쪽
     di = [1, 0]
