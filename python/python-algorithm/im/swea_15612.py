@@ -10,24 +10,7 @@ def r(chesspan):
             if chesspan[i][j] == 'O':
                 rook_count += 1
     print(f'rook_count = {rook_count}')
-                #
-                # if rook_count != 8:
-                #     return 'no'
-                # else:
-                #     # 모든 행에서도 겹치면 안되고 모든 열에서도 겹치면 안됨
-                #     for row in chesspan:
-                #         if row.count(rook) != 1:
-                #             return 'no'
-                #
-                #     for row in range(8):
-                #         for col in range(8):
-                #             count = 0
-                #             if chesspan[row][col] == rook:
-                #                 count += 1
-                #                 if count != 1:
-                #                     return 'no'
-                #
-                # return 'yes'
+           return 'yes'
 
 
 T= int(input())
