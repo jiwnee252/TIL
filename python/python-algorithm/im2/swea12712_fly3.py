@@ -16,7 +16,8 @@ for tc in range(1, T + 1):
             for k in range(4):  # k 방향
                 for z in range(1, M):  # 중심에서의 거리
                     ni, nj = i + di[k] * z, j + dj[k] * z
-                    if 0 <= ni                         s += arr[ni][nj]
+                    if 0 <= ni < N and 0 <= nj < N:
+                        s += arr[ni][nj]
             if max_v < s:  # 최대값과 비교
                 max_v = s
             # X 방향으로 뿌리는 경우
