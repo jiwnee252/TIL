@@ -33,3 +33,27 @@ for tc in range(1, T+1):
                 count += 1  # 공 개수 증가
 
     print(f'#{tc} {count}')
+
+'''
+T = int(input())
+for tc in range(1, T+1):
+    S = input()
+    count = 0
+    i = 0
+
+    while i < len(S):
+        if i+1 < len(S) and S[i] == '(' and S[i+1] == ')':
+            count += 1
+            i += 2
+        elif S[i] == '(' and i+1 < len(S) and S[i+1] != ')':
+            count += 1
+            i += 1
+        elif S[i] == '|' and i+1 < len(S) and S[i+1] == ')':
+            count += 1
+            i += 2
+        else:
+            i += 1
+
+    print(f'#{tc} {count}')
+
+'''
