@@ -15,15 +15,3 @@ for tc in range(1, T+1):
     print(f'#{tc} {c*N}')
 
 
-'''
-    s = set()
-    count = 0
-    while(len(s) < 10):
-        count += 1
-        num = N * count
-        nums = str(num) # 문자열로 변환한다
-        for i in range(len(nums)):
-            s.add(nums[i])
-
-    print(count * N)
-'''
